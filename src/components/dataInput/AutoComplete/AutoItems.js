@@ -85,7 +85,7 @@ function Complete() {
         dropdownMatchSelectWidth={false}
         dropdownStyle={{ width: 300 }}
         size="large"
-        
+
         style={{ width: '100%' }}
         dataSource={options}
         placeholder="input here" //输入提示框
@@ -93,8 +93,10 @@ function Complete() {
         children={<Input/>}
         filterOption={function (inputValue,option) {
           console.log(inputValue,option);
-
           return option;
+        }}
+        onBlur={function(inputValue){
+          console.log("onBlur失去焦点",inputValue);
         }}
 
 
