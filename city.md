@@ -92,4 +92,4 @@ let ciry=[
 ```
 
 <label style="color:red">明天的你一定会感谢现在拼命的自己!</label>
-
+<font face="宋体" color=red>明天的你一定会感谢现在拼命的自己!</font>
