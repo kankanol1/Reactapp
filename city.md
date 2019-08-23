@@ -90,7 +90,11 @@ let ciry=[
     
 ];
 ```
-```html
-<label style="color:red">明天的你一定会感谢现在拼命的自己!</label>
-```
+
+<div>
+<p style="color:red">明天的你一定会感谢现在拼命的自己!</p>
+<p style="color:red">明天的你一定会感谢现在拼命的自己!</p>
+</div>
+
+
 
