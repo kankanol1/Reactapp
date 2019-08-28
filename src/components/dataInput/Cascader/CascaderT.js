@@ -70,7 +70,7 @@ class LazyOptions extends React.Component {
         fieldNames={{
           label:"label",
           value:"value",
-          children:"children"
+          children:"childrens.js"
         }}
         showSearch={function (inputValue,path) {
           console.log(inputValue,path);

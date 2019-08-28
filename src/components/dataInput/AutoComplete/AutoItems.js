@@ -60,7 +60,7 @@ function renderTitle(title) {
 const options = dataSource
   .map(group => (
     <OptGroup key={group.title} label={renderTitle(group.title)}>
-      {group.children.map(opt => (
+      {group.childrens.map(opt => (
         <Option key={opt.title} value={opt.title}>
           {opt.title}
           <span className="certain-search-item-count">{opt.count} people</span>

@@ -58,31 +58,10 @@ const options = [
       {value: '昆山市', label: '昆山市'},
     ]
   }
-
 ];
 const moment = require('moment');
-
-/*function timer(){
-  let data = response.data.data;
-  //console.log(data);//打印测试
-  let allData = [];
-  for(let i=0;i<data.length;i++){
-    allData.push(
-      {
-        name:data.name,//可能是其他字段 data.id
-        value:data.value,
-      }
-    );
-  }
-  //console.log(allData);//打印测试
-
-setTimeout(timer(),1000)
-  return moment().format('YYYY-MM-DD HH:mm:ss');
-}*/
-
 function onChange(value) {
   console.log(value);
-
 }
 
 // Just show the latest item.
@@ -90,33 +69,39 @@ function displayRender(label) {
   return label[label.length - 1];
 }
 
-function timer() {
-  setInterval(function () {
-    return moment().format('YYYY-MM-DD HH:mm:ss');
-  }, 1000)
-}
-
 class CascaderO extends React.Component {
   constructor(params) {
     super(params);
     this.state = {
       time: '',
+      data: [
+        {name: 'kankan', fruit: 'apple'},
+        {name: 'Fanny', fruit: 'banana'},
+        {name: 'Kain', fruit: 'pear'},
+      ],
     }
   }
+
   componentDidMount() {
-    setInterval(()=>{
+    setInterval(() => {
       this.setState({
         time: moment().format('YYYY-MM-DD HH:mm:ss'),
+
       })
     }, 1000)
   }
 
 
   render() {
-
     return (
       <div>
-        <p>日期：{this.state.time}</p>
+        <p><span>定时器</span>日期：{this.state.time}</p>
+        <p>for循环</p>
+        <ul style={{listStyle:'none',}}>
+          {this.state.data.map((item, i) => (
+            <li key={i} value={item.name}>{item.name}</li>
+          ))}
+        </ul>
         <Cascader
           options={options}
           onChange={e => onChange(e)}
@@ -125,9 +110,6 @@ class CascaderO extends React.Component {
           displayRender={displayRender}
           expandTrigger="hover"
           size="large"
-          /*showSearch={function(inputValue,path){
-            console.log(inputValue,path);
-          }}*/
           showSearch={{
             filter: (inputValue, path) => {
               console.log(inputValue, path);

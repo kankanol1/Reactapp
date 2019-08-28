@@ -6,6 +6,7 @@
 
 import React from 'react';
 import FormO from './formO';
+import FormT from './formT';
 
 import './index.css';
 
@@ -16,6 +17,7 @@ class FormInput extends React.Component {
       <div className="form-input">
         <h3>表单</h3>
         <FormO />
+        <FormT />
       </div>
     )
   }

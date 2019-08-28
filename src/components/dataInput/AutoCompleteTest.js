@@ -2,7 +2,7 @@ import React from 'react'
 import {Button, Input} from 'antd';
 import AutoInput from './AutoComplete/AutoInput';
 import AutoSearch from './AutoComplete/AutoSearch';
-import AutoItems from './AutoComplete/AutoItems';
+// import AutoItems from './AutoComplete/AutoItems';
 
 class Complete extends React.Component {
   constructor(props) {
@@ -25,8 +25,6 @@ class Complete extends React.Component {
         <br/>
         <AutoInput/><br/>
         <AutoSearch/><br/>
-        <AutoItems/><br/>
-        <AutoItems/><br/>
       </div>
     );
   }
