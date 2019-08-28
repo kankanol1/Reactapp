@@ -12,7 +12,7 @@ class childThree extends React.Component {
   constructor(props,context){
     super(props);
     this.state= {
-      
+
       data:props,
       context:context,
     }
